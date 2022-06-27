@@ -5,9 +5,7 @@ import (
 	"log"
 	"net"
 
-	"github.com/macduyhai/grpcSimple/simplepb"
-	_ "github.com/macduyhai/grpcSimple/tree/main/simplepb"
-
+	"github.com/macduyhai/grpcSimple/tree/main/simplepb"
 	"google.golang.org/grpc"
 )
 
@@ -16,7 +14,7 @@ type server struct {
 }
 
 func main() {
-	fmt.Println("Service proto simon")
+	fmt.Println("Server proto simon")
 	lis, err := net.Listen("tcp", "0.0.0.0:8899")
 	if err != nil {
 		log.Fatalf("Error while create listen %v", err)
