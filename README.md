@@ -1,5 +1,6 @@
 # grpcSimple
 Simple grpc with go<br>
+<p>Clone repo: git clone https://github.com/macduyhai/grpcSimple.git  </p>
 <h1>1. Init proto file </h1>
 <h1>2. Install cmake(not required)</h1>
 <p>- If not installl</p>
