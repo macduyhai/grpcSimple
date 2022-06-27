@@ -9,3 +9,11 @@ Simple grpc with go<br>
 <p>- If  installl</p>
 <p> Run server: make run-server</p>
 <p> Run client: make run-client</p>
+<h1>3.Output</h1>
+<h3>Server:</h3>
+<p> 2022/06/27 23:46:31 Server proto is running ....</p>
+<p> 2022/06/27 23:46:33 Anna say hello</p>
+<h3>Client:</h3>
+<p> 2022/06/27 23:46:33 Client proto starting...</p>
+<p> 2022/06/27 23:46:33 Connection done</p>
+<p> 2022/06/27 23:46:33 Greeting: I'm Simon</p>
