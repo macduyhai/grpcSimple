@@ -5,12 +5,14 @@ import (
 	"log"
 	"net"
 
-	"grpcSimple/simplepb"
+	"github.com/macduyhai/grpcSimple/simplepb"
+	_ "github.com/macduyhai/grpcSimple/tree/main/simplepb"
 
 	"google.golang.org/grpc"
 )
 
 type server struct {
+	simplepb.UnimplementedGreeterServer
 }
 
 func main() {
@@ -20,7 +22,7 @@ func main() {
 		log.Fatalf("Error while create listen %v", err)
 	}
 	s := grpc.NewServer()
-	simplepb.RegisterHelloServiceServer(s, &server{})
+	simplepb.RegisterGreeterServer(s, &server{})
 
 	err = s.Serve(lis)
 	if err != nil {
