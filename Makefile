@@ -1,2 +1,2 @@
 gen-pr:
-	protoc proto/hello.proto --go_out=plugins=grpc:.
+	protoc simplepb/simplepb.proto --go_out=plugins=grpc:.

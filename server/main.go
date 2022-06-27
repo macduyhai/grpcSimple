@@ -5,6 +5,8 @@ import (
 	"log"
 	"net"
 
+	"grpcSimple/simplepb"
+
 	"google.golang.org/grpc"
 )
 
@@ -18,5 +20,11 @@ func main() {
 		log.Fatalf("Error while create listen %v", err)
 	}
 	s := grpc.NewServer()
+	simplepb.RegisterHelloServiceServer(s, &server{})
+
+	err = s.Serve(lis)
+	if err != nil {
+		log.Fatalf("Error while server %v", err)
+	}
 
 }

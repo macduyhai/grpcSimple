@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Jun 27 21:32:15 2022
+# Make data base, printed on Mon Jun 27 21:46:48 2022
 
 # Variables
 
@@ -107,7 +109,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 17805
+GIO_LAUNCHED_DESKTOP_FILE_PID = 24365
 # automatic
 %F = $(notdir $%)
 # environment
@@ -161,7 +163,7 @@ SHLVL = 0
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-14cb8b03-81a4-4b6d-acf9-a5750bf8fd92.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-a1260df7-689d-4d38-99d5-608197163a29.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -267,7 +269,7 @@ all:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-27 21:19:29.586765345
+#  Last modified 2022-06-27 21:38:02.772221397
 #  File has been updated.
 #  Successfully updated.
 
@@ -277,15 +279,13 @@ Makefile:
 #  Modification time never checked.
 #  File has not been updated.
 
- 
-make: *** No rule to make target 'all'.  Stop.
-
 gen-pr:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+ 
 #  recipe to execute (from 'Makefile', line 2):
-	protoc proto/hello.proto --go_out=plugins=grpc:.
+	protoc simplepb/hello.proto --go_out=plugins=grpc:.
 
 # files hash-table stats:
 # Load=5/1024=0%, Rehash=0, Collisions=0/15=0%
@@ -295,12 +295,12 @@ gen-pr:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 15 / storage = 119 B / avg = 7 B
-# current buf: size = 8162 B / used = 119 B / count = 15 / avg = 7 B
+# strcache buffers: 1 (0) / strings = 15 / storage = 122 B / avg = 8 B
+# current buf: size = 8162 B / used = 122 B / count = 15 / avg = 8 B
 
 # strcache performance: lookups = 20 / hit rate = 25%
 # hash-table stats:
 # Load=15/8192=0%, Rehash=0, Collisions=1/20=5%
-# Finished Make data base on Mon Jun 27 21:32:15 2022
+# Finished Make data base on Mon Jun 27 21:46:48 2022
 
  
