@@ -1,3 +1,3 @@
-module github.com/macduyhai/grpcSimple/simplepb
+module github.com/macduyhai/grpcSimple/tree/main/simplepb
 
 go 1.18
