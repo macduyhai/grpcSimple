@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package hello;
+
+option go_package ="simplepb";
+
+message String {
+    string value =1;
+}
+// The request message containing the user's name.
+message HelloRequest {
+    string name = 1;
+  }
+  
+  // The response message containing the greetings
+  message HelloReply {
+    string message = 1;
+  }
+  
+
+service HelloService{
+    rpc Hello(String) returns (String);
+}
+
+
+// The greeting service definition.
+service Greeter {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+}
+
