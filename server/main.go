@@ -1,11 +1,12 @@
 package main
 
 import (
-	"fmt"
+	"context"
 	"log"
 	"net"
 
-	"github.com/macduyhai/grpcSimple/tree/main/simplepb"
+	"grpcSimple/simplepb"
+
 	"google.golang.org/grpc"
 )
 
@@ -13,8 +14,17 @@ type server struct {
 	simplepb.UnimplementedGreeterServer
 }
 
+func (s *server) SayHello(ctx context.Context, req *simplepb.HelloRequest) (*simplepb.HelloReply, error) {
+	log.Printf("%v say hello \n", req.GetName())
+	resp := &simplepb.HelloReply{
+		Message: "I'm Simon",
+	}
+	return resp, nil
+
+}
+
 func main() {
-	fmt.Println("Server proto simon")
+	log.Println("Server proto is running ....")
 	lis, err := net.Listen("tcp", "0.0.0.0:8899")
 	if err != nil {
 		log.Fatalf("Error while create listen %v", err)
